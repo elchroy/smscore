@@ -1,0 +1,30 @@
+{
+    "name": "elchroy/smscore",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "RMS\\": "src/",
+            "RMS\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:elchroy/handlers.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "minimum-stability": "dev",
+        "prefer-stable": true
+    },
+    "require": {
+        "php": "^8.1.0",
+        "elchroy/handlers": "dev-master"
+    },
+    "require-dev": {
+        "laravel/pint": "dev-main",
+        "phpunit/phpunit": "^11.3@dev",
+        "mockery/mockery": "2.0.x-dev"
+    }
+}

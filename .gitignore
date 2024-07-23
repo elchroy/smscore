@@ -1,0 +1,26 @@
+# Ignore vendor directory
+/vendor/
+
+# Ignore node_modules directory
+/node_modules/
+
+# Ignore compiled assets
+/public/css/
+/public/js/
+/public/mix-manifest.json
+
+# Ignore environment file
+.env
+
+# Ignore storage directory
+/storage/
+
+# Ignore database files
+/database/*.sqlite
+
+# Ignore IDE specific files
+/.idea/
+/.vscode/
+
+!coverage
+/coverage/**
