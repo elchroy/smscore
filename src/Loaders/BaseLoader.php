@@ -23,14 +23,8 @@ abstract class BaseLoader extends BaseHandler
     {
         $this->loadKeys($payload);
 
-        $identifier = $payload->getData($this->identifierKey);
-
-        if (! $identifier) {
-            throw new \Exception($this->idNotFound);
-        }
-
         // find school
-        $instance = $this->loadData($payload, $identifier);
+        $instance = $this->loadData($payload);
 
         if (! $instance) {
             throw new \Exception($this->dataNotFound);
@@ -41,5 +35,5 @@ abstract class BaseLoader extends BaseHandler
 
     abstract public function loadKeys(Payload $payload): void;
 
-    abstract public function loadData(Payload $payload, $identifier): mixed;
+    abstract public function loadData(Payload $payload): mixed;
 }

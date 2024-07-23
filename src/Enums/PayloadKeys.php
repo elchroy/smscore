@@ -9,4 +9,6 @@ enum PayloadKeys: string
 
     case SUBJECT = 'subject';
     case SUBJECT_ID = 'subjectId';
+
+    case SUBJECT_ASSESSMENTS = 'subjectAssessments';
 }

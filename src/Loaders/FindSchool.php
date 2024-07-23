@@ -21,8 +21,14 @@ class FindSchool extends BaseLoader
         $this->dataNotFound = 'School not found';
     }
 
-    public function loadData(Payload $payload, $identifier): mixed
+    public function loadData(Payload $payload): mixed
     {
+        $identifier = $payload->getData($this->identifierKey);
+
+        if (! $identifier) {
+            throw new \Exception($this->idNotFound);
+        }
+
         return $payload->getData($this->objectKey, function () use ($identifier) {
             return $this->database->findSchool($identifier);
         });
